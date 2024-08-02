@@ -33,7 +33,11 @@ const placeOrder = async(req,res) => {
         estimateddate : estimatedDate,
         totalamount : totalamount
     })
-    res.status(200).json("Order Placed")
+    const deletecart = await Cart.findOneAndDelete({user_id:userid})
+    res.status(200).json({
+        message : "Order placed successfully",
+        deleted : deletecart
+    })
 }
 else{
     res.status(200).json("No items selected to place order")
