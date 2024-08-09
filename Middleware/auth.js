@@ -4,7 +4,7 @@ const auth = (req , res , next) => {
 
     //["Bearer,"fdcgvkhojlmo"j
     //const token = req.header("Authorization").replace("Bearer"," ")
-
+    console.log(req)
     const token = req.header("Authorization").split(" ")[1]
     if(!token) return res.status(401).json({error : "Token required"});
     try{

@@ -45,7 +45,7 @@ const login = async(req,res) => {
             })
          }
          const token = jwt.sign({userId : user.id} , "secret_key" , {    //to generate token
-            expiresIn : '1h'
+            expiresIn : '5h'
          })
          res.json({token})
        }

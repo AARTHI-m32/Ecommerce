@@ -85,9 +85,8 @@ const getCartProducts = async (req,res) => {
                 totalAmount += total
             }
         }
-        let carts = {products,totalAmount}
-       return res.status(200).json({
-            message : "Cart Products found",
+        let carts = [products,totalAmount]
+       return res.status(200).json({         
             product : carts
             })
            

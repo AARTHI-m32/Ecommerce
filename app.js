@@ -26,6 +26,8 @@ app.use('/user', userroutes);
 app.use('/cart',cartroutes);
 app.use('/order',orderroutes)
 
-app.listen(3000 , ()=> {
+app.listen(3001 , ()=> {
     console.log("Server is running on port 3000");
 });
+
+//https://ecommerceamern.onrender.com
